@@ -5,7 +5,7 @@ class CreateMedications < ActiveRecord::Migration[6.1]
       t.integer :quantity
       t.text :notes
       t.string :start_date
-      t.resources :user
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

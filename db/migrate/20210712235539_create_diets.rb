@@ -5,7 +5,7 @@ class CreateDiets < ActiveRecord::Migration[6.1]
       t.text :photo
       t.text :description
       t.string :meal_time
-      t.resources :user
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
