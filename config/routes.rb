@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'medications/index'
+  get 'medications/show'
+  get 'medications/new'
+  get 'medications/edit'
+  get 'medications/create'
+  get 'medications/update'
+  get 'medications/destroy'
     resources 'doctors'
     resources 'diets'
 
