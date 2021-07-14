@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+#header {
+    position: relative;
+}
+
+#element {
+    z-index: 1000;
+    position: absolute;
+    margin-top: 200px;
+}
+
+#scope {
+text-align: center;
+    filter: blur(1.5px);
+    z-index: 1;
+}
+
+#content {
+    margin: 50px
+}
+ 
