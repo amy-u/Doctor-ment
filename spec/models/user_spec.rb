@@ -24,6 +24,7 @@ RSpec.describe User, type: :model do
     subject.number = "0jfni(*&$8"
     expect(subject).to_not be_valid
   end
+#   hmmmmmm what is wrong here?
   it "valid if empty" do
     subject.allergic=nil
     expect(subject).to be_valid
