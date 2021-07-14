@@ -51,7 +51,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:name, :phone_number, :photo, :allergic, :member_number)
+      params.require(:user).permit(:name, :number, :photo, :allergic, :member_ID)
     end
 
     def catch_not_found(e)

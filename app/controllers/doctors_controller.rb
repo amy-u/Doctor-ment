@@ -61,7 +61,7 @@ end
 
     # Only allow a list of trusted parameters through.
     def doctor_params
-      params.require(:doctor).permit(:doctor_name, :phone_number, :hospital_name, :address, :user_id)
+      params.require(:doctor).permit(:name, :number, :hospital_name, :address, :user_id)
     end
 
     def catch_not_found(e)

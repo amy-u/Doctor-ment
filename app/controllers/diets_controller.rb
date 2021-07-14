@@ -61,7 +61,7 @@ class DietsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def diet_params
-      params.require(:diet).permit(:name, :photo_url, :description_ingredients, :meal_time, :user_id)
+      params.require(:diet).permit(:name, :photo, :description, :meal_time, :user_id)
     end
     def catch_not_found(e)
       Rails.logger.debug("We had a not found exception")
