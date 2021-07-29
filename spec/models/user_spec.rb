@@ -24,9 +24,20 @@ RSpec.describe User, type: :model do
     subject.number = "0jfni(*&$8"
     expect(subject).to_not be_valid
   end
-#   hmmmmmm what is wrong here?
   it "valid if empty" do
-    subject.allergic=nil
+    subject.allergic = nil
     expect(subject).to be_valid
     end
+    it "valid if empty" do
+      subject.member_ID = nil
+      expect(subject).to be_valid
+    end
+    it "valid with space in member ID" do
+    subject.member_ID = "JNE 984"
+    expect(subject).to be_valid
+    end
+    it "valid member ID" do
+      expect(subject).to be_valid
+    end
+    # Come back need to test users photo
 end
