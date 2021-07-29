@@ -24,9 +24,13 @@ RSpec.describe Diet, type: :model do
         subject.meal_time = nil
         expect(subject).to_not be_valid
     end
-    it "valid meal time string" do
-        subject.description = "Brunch"
+    it "meal time valid with inclusion word" do
+        subject.meal_time = "Brunch"
         expect(subject).to be_valid
+    end
+    it "not valid when meal time is other than inclusion word" do
+        subject.meal_time = "jdsjs"
+        expect(subject).to_not be_valid
     end
     it "not valid when user is nil" do
         subject.user_id = nil

@@ -8,8 +8,6 @@ class Diet < ApplicationRecord
   #   message: 'must be a url for gif, jpg, or png image.'
   # }
   validates :description, length: {maximum: 500}, allow_blank: true
-  validates :meal_time, presence: true, format: { with: /\A[a-zA-Z]+\z/}
-    # Where should I put this restriction?
-    # message: "Lunch, Dinner, Breakfast, and Snack" }
+  validates :meal_time, presence: true, inclusion: {in: %w(Breakfast Lunch Dinner Snack Brunch)}
   validates :user_id, presence: true
 end
