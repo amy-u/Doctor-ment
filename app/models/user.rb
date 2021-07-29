@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-    has_many :doctors
-    has_many :medications
-    has_many :diets
+    has_many :doctors, dependent: :destroy
+    has_many :medications, dependent: :destroy
+    has_many :diets, dependent: :destroy
 
     validates :name, presence: true, format: { with: /\A[a-zA-Z\.\s]+\z/,
         message: "only allows letters" }
@@ -13,7 +13,7 @@ class User < ApplicationRecord
       #  message: 'must be a url for gif, jpg, or png image.'
     #  }
      validates :allergic, length: {maximum: 500}
-     validates :allergic, format: { with: /\A[a-zA-Z ^0-9`!@#\$%\^&*+_=\s]+\z/,
+     validates :allergic, format: { with: /\A[a-zA-Z ^0-9\s]+\z/,
        message: "only allows letters" }, allow_blank: true
     validates :member_ID, format: {with: /\A[a-zA-Z ^0-9'!@#\$%\^&*+_=\s]+\z/}, allow_blank: true
    
