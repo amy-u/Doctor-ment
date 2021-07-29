@@ -16,8 +16,16 @@ RSpec.describe Medication, type: :model do
         subject.quantity = 100
         expect(subject).to be_valid
     end
+    it "not valid when quantity is nil" do
+        subject.quantity = nil
+        expect(subject).to_not be_valid
+    end
     it "valid notes when / and . is used" do
         subject.notes = "Take 1/2 tab in the morning."
+        expect(subject).to be_valid
+    end
+    it "valid when notes is nil" do
+        subject.notes = nil
         expect(subject).to be_valid
     end
     it "not valid when user id is nil" do
