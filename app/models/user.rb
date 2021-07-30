@@ -13,8 +13,8 @@ class User < ApplicationRecord
       #  message: 'must be a url for gif, jpg, or png image.'
     #  }
      validates :allergic, length: {maximum: 500}
-     validates :allergic, format: { with: /\A[a-zA-Z ^0-9\s]+\z/,
-       message: "only allows letters" }, allow_blank: true
+     validates :allergic, format: { with: /\A[a-zA-Z ^0-9\s,\. ]+\z/,
+       message: "only allows letters and numbers" }, allow_blank: true
     validates :member_ID, format: {with: /\A[a-zA-Z ^0-9'!@#\$%\^&*+_=\s]+\z/}, allow_blank: true
    
 end
