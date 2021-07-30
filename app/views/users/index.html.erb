@@ -8,41 +8,24 @@
     <div class="card">
       <div class="d-flex">
         <img id="profile" class="card-image-left"
-          src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          width="50%" height="50%" class="rounded">
-        <div class="card-body">
-          <% user=@users.find_by_id(1) %>
-            <h2 class="card-title">
-              <%=user.name %>
-            </h2>
-            <div class="card-text">
-              <p>
-                <%= user.number %>
-              </p>
-              <p>
-                <%= user.member_ID %>
-              </p>
-            </div>
-            <h3>
-              Allergic to:
-              <h3>
-                <p class="card-text">
-                <%= user.allergic%>
-              </p>
+          <!-- src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" -->
+          <!-- width="50%" height="50%" class="rounded"> -->
+
         </div>
       </div>
       <!-- <icon name=" pencil"> -->
                   </icon>
                   <link rel="pencil-outline" href="../users/edit">
                   <!-- End of info card -->
-        </div>
-      </div>
+    </div>
+  </div>
 
       <div>
         <!-- Diet card -->
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <% diet=user.diets.first user=@users.find_by_id(1) %>
+            <% user=@users.find_by_id(1) %>
+            <% diet=user.diets.first %> 
             <h5 class="card-title">Diet</h5>
             <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -55,6 +38,5 @@
       </div>
 
       <!-- Background photo -->
-    </div>
     <img id="scope" src="https://image.freepik.com/free-photo/doctor-patient_1421-64.jpg" z-line="1" class="align-left">
-</body>
+</body> -->
