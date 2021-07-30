@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    render template: "users/index.html.erb", layout: "application"
+    # render template: "users/index.html.erb", layout: "application"
   end
 
   def show
