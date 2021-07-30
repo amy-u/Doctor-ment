@@ -1,2 +1,31 @@
-<h1>Diets#index</h1>
-<p>Find me in app/views/diets/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1>Diets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Photo url</th>
+      <th>Description ingredients</th>
+      <th>Meal time</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @diets.each do |diet| %>
+      <tr>
+        <td><%= diet.name %></td>
+        <td><%= diet.photo_url %></td>
+        <td><%= diet.description_ingredients %></td>
+        <td><%= diet.meal_time %></td>
+        <td><%= diet.user_id %></td>
+        <!-- <td><%= link_to 'Show', diet %></td>
+        <td><%= link_to 'Edit', edit_diet_path(diet) %></td>
+        <td><%= link_to 'Destroy', diet, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
