@@ -1,2 +1,32 @@
-<h1>Medications#show</h1>
-<p>Find me in app/views/medications/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<div id="show_element" class="contianer">
+<p>
+  <strong>Name:</strong>
+  <%= @medication.name %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @medication.quantity %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @medication.notes %>
+</p>
+
+<p>
+  <strong>Start Date:</strong>
+  <%= @medication.start_date %>
+</p>
+
+<p>
+    <strong>Client ID:</strong>
+    <%= @medication.user_id %>
+</p>
+
+<div class="btn btn-primary">
+  <%= link_to 'Edit', edit_medication_path(@medication), :class => "btn"  %> |
+  <%= link_to 'Back', medications_path, :class => "btn"  %>
+</div>
