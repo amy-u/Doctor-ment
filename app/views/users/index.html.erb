@@ -1,42 +1,28 @@
-<p id="notice">
-  <%= notice %>
-</p>
-
-<body>
+<p id="notice"><%= notice %></p>
+<h2>Client</h2>
+<div class="create_link"><%= link_to 'Add New Client', new_user_path %></div>
+<div class="container">
   <!-- Info card -->
-  <div class="card" style="width: 50rem;">
+  <!-- <div class="row" > -->
+  <div id="row" class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+    <% @users.each do |user| %>
     <div class="card">
-      <div class="d-flex">
-        <img id="profile" class="card-image-left"
-          <!-- src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" -->
-          <!-- width="50%" height="50%" class="rounded"> -->
-
-        </div>
+      <img src="<% user.photo %>" class="card-img-top" alt="Profile Picture" />
+      <div class="card-body text-wrap" style="width: 270px;">
+        <h2 class="card-title"><%= user.name %></h2>
+        <p class="card-text">Phone Number: <%= user.number %></p>
+        <p class="card-text">Allergic: <%= user.allergic %></p>
+        <p class="card-text">Member ID: <%= user.member_ID %></p>
       </div>
-      <!-- <icon name=" pencil"> -->
-                  </icon>
-                  <link rel="pencil-outline" href="../users/edit">
-                  <!-- End of info card -->
+      <div class="card-footer">
+        <%= link_to 'Edit', edit_user_path(user) %> | <%= link_to 'Delete',
+        user, method: :delete, data: {confirm: 'Click OK to delete'} %> </br> <%=
+        link_to 'Diet', diet_path(user) %> | <%= link_to 'Medication',
+        medication_path(user) %> | <%= link_to 'Provider', doctor_path(user) %>
+      </div>
     </div>
+    <% end %>
   </div>
-
-      <div>
-        <!-- Diet card -->
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <% user=@users.find_by_id(1) %>
-            <% diet=user.diets.first %> 
-            <h5 class="card-title">Diet</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-        <!-- End of diet card -->
-      </div>
-
-      <!-- Background photo -->
-    <img id="scope" src="https://image.freepik.com/free-photo/doctor-patient_1421-64.jpg" z-line="1" class="align-left">
-</body> -->
+  <!-- </div> -->
+  <!-- End of info card -->
+</div>
