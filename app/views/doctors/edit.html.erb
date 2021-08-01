@@ -1,2 +1,8 @@
-<h1>Doctors#edit</h1>
-<p>Find me in app/views/doctors/edit.html.erb</p>
+<h1 id="edit_title">Editing Doctor</h1>
+
+<%= render 'form', doctor: @doctor %>
+
+<div class="btn btn-primary">
+<%= link_to 'Show', @doctor , :class => "btn" %> |
+<%= link_to 'Back', doctors_path, :class => "btn" %>
+</div>

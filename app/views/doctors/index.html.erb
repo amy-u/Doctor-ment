@@ -1,2 +1,26 @@
-<h1>Doctors#index</h1>
-<p>Find me in app/views/doctors/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+<h2>Doctor</h2>
+<div class="create_link"><%= link_to 'Add Doctor', new_doctor_path %></div>
+<div class="container">
+  <!-- Info card -->
+  <!-- <div class="row" > -->
+  <div id="row" class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+    <% @doctors.each do |doctor| %>
+    <div class="card">
+      <div class="card-body text-wrap" style="width: 270px;">
+        <h2 class="card-title"><%= doctor.name %></h2>
+        <p class="card-text">Number: <%= doctor.number %></p>
+        <p class="card-text">Work Place: <%= doctor.hospital_name %></p>
+        <p class="card-text">Address: <%= doctor.address%></p>
+        <p class="card-text">Client ID: <%= doctor.user_id %></p>
+      </div>
+      <div class="card-footer">
+        <%= link_to 'Edit', edit_doctor_path(doctor) %> | <%= link_to 'Delete',
+        doctor, method: :delete, data: {confirm: 'Click OK to delete'} %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <!-- </div> -->
+  <!-- End of info card -->
+</div>
