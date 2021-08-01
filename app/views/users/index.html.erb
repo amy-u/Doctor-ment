@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
-<h2>Find Client</h2>
+<h2>Client</h2>
 <div class="create_link"><%= link_to 'Add New Client', new_user_path %></div>
 <div class="container">
   <!-- Info card -->
   <!-- <div class="row" > -->
-    <div id="row" class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
-      <% @users.each do |user| %>
-      <div class="card">
-      <img src="<% user.photo %>" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title"><%= user.name %></h5>
+  <div id="row" class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+    <% @users.each do |user| %>
+    <div class="card">
+      <img src="<% user.photo %>" class="card-img-top" alt="Profile Picture" />
+      <div class="card-body text-wrap" style="width: 270px;">
+        <h2 class="card-title"><%= user.name %></h2>
         <p class="card-text">Phone Number: <%= user.number %></p>
         <p class="card-text">Allergic: <%= user.allergic %></p>
         <p class="card-text">Member ID: <%= user.member_ID %></p>
       </div>
       <div class="card-footer">
-        <%= link_to 'Edit', edit_user_path(user) %> | <%= link_to 'Delete', user,
-        method: :delete, data: {confirm: 'Are you sure?'} %> | <%= link_to 'Diet',
-        diet_path(user) %> | <%= link_to 'Medication', medication_path(user) %> |
-        <%= link_to 'Provider', doctor_path(user) %>
+        <%= link_to 'Edit', edit_user_path(user) %> | <%= link_to 'Delete',
+        user, method: :delete, data: {confirm: 'Click OK to delete'} %> </br> <%=
+        link_to 'Diet', diet_path(user) %> | <%= link_to 'Medication',
+        medication_path(user) %> | <%= link_to 'Provider', doctor_path(user) %>
       </div>
     </div>
     <% end %>
