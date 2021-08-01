@@ -1,31 +1,26 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Diets</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Photo url</th>
-      <th>Description ingredients</th>
-      <th>Meal time</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<h2>Diet</h2>
+<div class="create_link"><%= link_to 'Add Diet', new_diet_path %></div>
+<div class="container">
+  <!-- Info card -->
+  <!-- <div class="row" > -->
+  <div id="row" class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
     <% @diets.each do |diet| %>
-      <tr>
-        <td><%= diet.name %></td>
-        <td><%= diet.photo_url %></td>
-        <td><%= diet.description_ingredients %></td>
-        <td><%= diet.meal_time %></td>
-        <td><%= diet.user_id %></td>
-        <!-- <td><%= link_to 'Show', diet %></td>
-        <td><%= link_to 'Edit', edit_diet_path(diet) %></td>
-        <td><%= link_to 'Destroy', diet, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      </tr>
+    <div class="card">
+      <img src="<% diet.photo %>" class="card-img-top" alt="Food Image" />
+      <div class="card-body text-wrap" style="width: 270px;">
+        <h2 class="card-title"><%= diet.name %></h2>
+        <p class="card-text">Description: <%= diet.description %></p>
+        <p class="card-text">Meal Time: <%= diet.meal_time %></p>
+        <p class="card-text">Client ID: <%= diet.user_id %></p>
+      </div>
+      <div class="card-footer">
+        <%= link_to 'Edit', edit_diet_path(diet) %> | <%= link_to 'Delete',
+        diet, method: :delete, data: {confirm: 'Click OK to delete'} %>
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+  <!-- </div> -->
+  <!-- End of info card -->
+</div>

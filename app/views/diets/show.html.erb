@@ -1,2 +1,33 @@
-<h1>Diets#show</h1>
-<p>Find me in app/views/diets/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<div id="show_element" class="contianer">
+<p>
+  <strong>Name:</strong>
+  <%= @diet.name %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @diet.photo %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @diet.description %>
+</p>
+
+<p>
+  <strong>Meal Time:</strong>
+  <%= @diet.meal_time %>
+</p>
+
+<p>
+    <strong>Client ID:</strong>
+    <%= @diet.user_id %>
+</p>
+</div>
+
+<div class="btn btn-primary">
+  <%= link_to 'Edit', edit_diet_path(@diet), :class => "btn"  %> |
+  <%= link_to 'Back', diets_path, :class => "btn"  %>
+</div>

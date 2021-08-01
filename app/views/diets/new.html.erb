@@ -1,2 +1,7 @@
-<h1>Diets#new</h1>
-<p>Find me in app/views/diets/new.html.erb</p>
+<h1>New Diet</h1>
+
+<%= render 'form', diet: @diet %>
+
+<div class='btn btn-primary'>
+    <%= link_to 'Back', diets_path, :class => "btn"  %>
+</div>
