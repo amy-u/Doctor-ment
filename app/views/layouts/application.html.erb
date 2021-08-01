@@ -14,11 +14,14 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('icon.png') %>
+
+
   </head>
 
   <body>
     <%= render 'home/header' %>
-    <div class="container">
+    <div id="elements" class="container">
       <%= yield %>
     </div>
     <footer>
