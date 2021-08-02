@@ -4,6 +4,7 @@ class DietsController < ApplicationController
   # GET /diets or /diets.json
   def index
     @diets = Diet.all
+    @users = User.all
     render tempate: "diets/index.html.erb", layout: "application"
   end
 
