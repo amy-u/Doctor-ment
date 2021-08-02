@@ -49,9 +49,9 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <!-- Why does this work? instead of @User https://bit.ly/2WBuTBM -->
-            <% User.all.each do |user| %>
+            <!-- <% User.all.each do |user| %> -->
             <a class="dropdown-item" href="<%= :user_id %>"> Testing </a>
-            <% end %>
+            <!-- <% end %> -->
           </div>
 
           <div class="text-lg-start"><%= f.text_field :user_id %></div>
