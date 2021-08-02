@@ -1,0 +1,144 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.head_img {
+    width: 100%;
+    height: 400px;
+    filter:
+    blur(.7px)
+    brightness(90%);
+    position: relative;
+}
+
+.title_doc {
+    position: absolute;
+    top: 265px;
+    left: 25px;
+    padding: 10px;
+    color: white;
+    font-size: 100px;
+    text-shadow: 10px 10px 10px black;
+}
+
+.navbar {
+    overflow: hidden;
+    top: 0;
+    background-color: #194479;
+    width: 100%;
+    height: 75px;
+    position: sticky;
+    z-index: 100;
+  // This removes the rounded corners on nav
+  border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  font-family: 'Playfair Display', serif;
+  padding: 0;
+  margin: 0 !important;
+}
+
+.nav-item {
+    font-size: 30px;
+    // padding: 2rem;
+}
+.nav-link {
+    color: white !important;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background-color: #0D3261;
+    color:white;
+}
+
+.navbar-toggle-icon {
+  size: 100px;
+}
+// Home Index ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$font: 'Varela Round', sans-serif; 
+
+#welcome {
+    font-family: $font;
+    font-size: 50px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+#infoText {
+    font-family: $font !important;
+    font-size: 40px;
+    text-align: center;
+    padding: 50px;
+    background: #194479;
+    color: white;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.row {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#details {
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    width: auto;
+    margin: 0;
+}
+.container img {
+    width: 60%;
+    height: 100%;
+}
+.img {
+    width: 45%;
+    height: 50%;
+}
+// Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.footer-basic {
+  position: relative;
+  bottom: 0 !important;
+  width: 100%;
+    padding: 40px;
+    background-color:#194479;
+    color: white !important;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:30px;
+    color:white !important;
+    margin-bottom:0;
+  }

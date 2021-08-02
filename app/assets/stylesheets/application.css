@@ -13,23 +13,30 @@
  *= require_tree .
  *= require_self
  */
-#header {
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+
+/* #header {
     position: relative;
+} */
+
+#elements {
+    /* margin: 0; */
+    /* text-align: center; */
+    /* padding: 0; */
+    background-color: #F8F8F8;
+    border-style: solid;
+    border-color: lightgrey;
 }
 
-#element {
-    z-index: 1000;
-    position: absolute;
-    margin-top: 200px;
-}
-
-#scope {
-text-align: center;
+/* #scope {
+    text-align: center;
     filter: blur(1.5px);
     z-index: 1;
-}
+} */
 
-#content {
-    margin: 50px
-}
- 
+/* .container img{
+    width: 50%;
+    height: 50%;
+} */
