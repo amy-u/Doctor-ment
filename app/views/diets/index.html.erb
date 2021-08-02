@@ -12,7 +12,7 @@
         <h2 class="card-title"><%= diet.name %></h2>
         <p class="card-text">Description: <%= diet.description %></p>
         <p class="card-text">Meal Time: <%= diet.meal_time %></p>
-        <p class="card-text">Client ID: <%= diet.user_id %></p>
+        <p class="card-text">Client Name: <%= User.find(diet.user_id).name %></p>
       </div>
       <div class="card-footer">
         <%= link_to 'Edit', edit_diet_path(diet) %> | <%= link_to 'Delete',

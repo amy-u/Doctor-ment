@@ -12,7 +12,7 @@
         <p class="card-text">Number: <%= doctor.number %></p>
         <p class="card-text">Work Place: <%= doctor.hospital_name %></p>
         <p class="card-text">Address: <%= doctor.address%></p>
-        <p class="card-text">Client ID: <%= doctor.user_id %></p>
+        <p class="card-text">Client ID: <%= User.find(doctor.user_id).name %></p>
       </div>
       <div class="card-footer">
         <%= link_to 'Edit', edit_doctor_path(doctor) %> | <%= link_to 'Delete',

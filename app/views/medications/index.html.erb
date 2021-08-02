@@ -12,7 +12,7 @@
         <p class="card-text">Quantity: <%= medication.quantity %></p>
         <p class="card-text">Notes: <%= medication.notes %></p>
         <p class="card-text">Start Date: <%= medication.start_date%></p>
-        <p class="card-text">Client ID: <%= medication.user_id %></p>
+        <p class="card-text">Client Name: <%= User.find(medication.user_id).name %></p>
       </div>
       <div class="card-footer">
         <%= link_to 'Edit', edit_medication_path(medication) %> | <%= link_to 'Delete',
