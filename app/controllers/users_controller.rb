@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    # render template: "users/index.html.erb", layout: "application"
+    render template: "users/index.html.erb", layout: "application"
   end
 
   def show
@@ -57,6 +57,6 @@ class UsersController < ApplicationController
     def catch_not_found(e)
       Rails.logger.debug("We had a not found exception")
       flash.alert = e.to_s
-      redirect_to customers_path
+      redirect_to users_path
     end
 end

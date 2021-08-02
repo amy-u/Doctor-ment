@@ -67,6 +67,6 @@ end
     def catch_not_found(e)
       Rails.logger.debug("We had a not found exception")
       flash.alert = e.to_s
-      redirect_to customers_path
+      redirect_to doctors_path
     end
   end
