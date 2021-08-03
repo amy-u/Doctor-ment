@@ -7,7 +7,11 @@
   <div id="row" class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
     <% @diets.each do |diet| %>
     <div class="card">
-      <img src="<% diet.photo %>" class="card-img-top" alt="Food Image" />
+      <% if diet.photo? %>
+      <img id="img" src="<%= diet.photo %>" class="card-img-top" alt="Food Image" />
+      <% else %>
+      <img id="img" src="https://health.gov/sites/default/files/2019-06/SVG%20Layer4.svg" class="card-img-top" alt="Food Image" />
+      <% end %>
       <div class="card-body text-wrap" style="width: 270px;">
         <h2 class="card-title"><%= diet.name %></h2>
         <p class="card-text">Description: <%= diet.description %></p>

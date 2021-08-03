@@ -8,7 +8,11 @@
 
 <p>
   <strong>Photo:</strong>
-  <%= @diet.photo %>
+  <% if @diet.photo? %>
+  <img src="<%= @diet.photo %>" alt="Food Image" />
+  <% else %>
+  <img id="img" src="https://health.gov/sites/default/files/2019-06/SVG%20Layer4.svg" class="card-img-top" alt="Food Image" />
+  <% end %>
 </p>
 
 <p>
@@ -22,8 +26,9 @@
 </p>
 
 <p>
-    <strong>Client ID:</strong>
-    <%= @diet.user_id %>
+    <strong>Client Name:</strong>
+    <!-- <%= @diet.user_id %> -->
+    <%= User.find(@diet.user_id).name %>
 </p>
 </div>
 

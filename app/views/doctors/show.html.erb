@@ -23,8 +23,8 @@
 </p>
 
 <p>
-    <strong>Client ID:</strong>
-    <%= @doctor.user_id %>
+    <strong>Client Name:</strong>
+    <%= User.find(@doctor.user_id).name %>
 </p>
 </div>
 

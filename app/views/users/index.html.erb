@@ -7,7 +7,11 @@
   <div id="row" class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
     <% @users.each do |user| %>
     <div class="card">
-      <img src="<% user.photo %>" class="card-img-top" alt="Profile Picture" />
+      <% if user.photo? %>
+      <img class="card-img-top" src="<%= user.photo %> "  alt="Profile Picture" />
+      <% else %>
+      <img class="card-img-top" src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" />
+      <% end %>
       <div class="card-body text-wrap" style="width: 270px;">
         <h2 class="card-title"><%= user.name %></h2>
         <p class="card-text">Phone Number: <%= user.number %></p>
