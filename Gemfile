@@ -30,7 +30,8 @@ gem 'factory_bot_rails'
 gem 'rails-controller-testing'
 gem 'faker'
 gem 'bootstrap-sass'
-
+gem 'bootstrap-datepicker-rails'
+gem 'jquery-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

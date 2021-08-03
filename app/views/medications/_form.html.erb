@@ -32,15 +32,17 @@
 
       <div class="field">
         <%= f.label :start_date %>
-        <div class="text-lg-start"><%= f.text_field :start_date %></div>
+        <div class="text-lg-start">
+          <%= f.text_field :start_date, class: 'form-control datepicker' %>
+        </div>
       </div>
+
       <div class="field">
         <%= f.label :user_id %>
         <div class="dropdown">
           <button
             class="btn btn-info dropdown-toggle"
             type="button"
-            href="#"
             id="dropdownMenuButton"
             data-toggle="dropdown"
             aria-haspopup="true"
@@ -48,12 +50,12 @@
           >
             Select Client Name
           </button>
-          <% User.all.each do |user| %>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <!-- Why does this work? instead of @User https://bit.ly/2WBuTBM -->
-            <a class="dropdown-item" href="#"><%= user.name %> </a>
+            <!-- <% User.all.each do |user| %> -->
+            <a class="dropdown-item" href="<%= :user_id %>"> Testing </a>
+            <!-- <% end %> -->
           </div>
-          <% end %>
 
           <div class="text-lg-start"><%= f.text_field :user_id %></div>
         </div>

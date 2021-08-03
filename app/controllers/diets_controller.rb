@@ -4,8 +4,12 @@ class DietsController < ApplicationController
   # GET /diets or /diets.json
   def index
     @diets = Diet.all
-    @users = User.all
-    render tempate: "diets/index.html.erb", layout: "application"
+  #   render json: @diet, status: :ok
+  # rescue ActiveRecord::RcordNotFound => catch_not_found
+  #   render json: {
+  #     error: catch_not_found.to_s
+  #   }, status: :not_found
+  #   render tempate: "diets/index.html.erb", layout: "application"
   end
 
   # GET /diets/1 or /diets/1.json
