@@ -27,8 +27,12 @@
 }
 
 .card img {
-    height: 260px;
-    width: auto;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    margin-top: 35px;
+    object-fit: cover;
 }
 
 .create_link {
