@@ -9,6 +9,7 @@ class DoctorsController < ApplicationController
 
   # GET /doctors/1 or /doctors/1.json
   def show
+    @user = User.all
   end
 
   # GET /doctors/new
