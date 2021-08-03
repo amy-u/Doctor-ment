@@ -26,9 +26,13 @@
     border-style: none;
 }
 
-.card img {
-    height: 260px;
-    width: auto;
+#img {
+    border-radius: 0 !important;
+    height: 250px;
+    width: 250px !important;
+    // margin: auto;
+    margin-top: 20px !important;
+    // object-fit: cover;
 }
 
 .create_link {
