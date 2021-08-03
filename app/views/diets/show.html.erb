@@ -26,8 +26,9 @@
 </p>
 
 <p>
-    <strong>Client ID:</strong>
-    <%= @diet.user_id %>
+    <strong>Client Name:</strong>
+    <!-- <%= @diet.user_id %> -->
+    <%= User.find(@diet.user_id).name %>
 </p>
 </div>
 

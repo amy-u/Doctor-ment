@@ -23,7 +23,7 @@
 
 <p>
     <strong>Client ID:</strong>
-    <%= @medication.user_id %>
+    <%= User.find(@medication.user_id).name %>
 </p>
 
 <div class="btn btn-primary">
