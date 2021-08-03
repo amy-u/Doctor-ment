@@ -32,8 +32,11 @@
 
       <div class="field">
         <%= f.label :start_date %>
-        <div class="text-lg-start"><%= f.text_field :start_date %></div>
+        <div class="text-lg-start">
+          <%= f.text_field :start_date, class: 'form-control datepicker' %>
+        </div>
       </div>
+
       <div class="field">
         <%= f.label :user_id %>
         <div class="dropdown">
